@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlowWorker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAL-1g-4RE">
+                                <rect key="frame" x="139.5" y="113" width="95" height="30"/>
+                                <state key="normal" title="Start Working"/>
+                                <connections>
+                                    <action selector="doWorkWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M8r-l7-YyP"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qEg-xC-oSj">
+                                <rect key="frame" x="0.0" y="212" width="375" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mOM-XR-d9R">
+                                <rect key="frame" x="262" y="118" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XAL-1g-4RE" firstAttribute="centerY" secondItem="mOM-XR-d9R" secondAttribute="centerY" id="2rr-wm-zAT"/>
+                            <constraint firstItem="qEg-xC-oSj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3VL-xX-Lw0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qEg-xC-oSj" secondAttribute="bottom" id="FRk-qf-PBd"/>
+                            <constraint firstItem="XAL-1g-4RE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="G9k-Ia-fdR"/>
+                            <constraint firstItem="mOM-XR-d9R" firstAttribute="leading" secondItem="XAL-1g-4RE" secondAttribute="trailing" constant="27.5" id="Qko-TV-BG7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qEg-xC-oSj" secondAttribute="trailing" id="hDT-XS-iac"/>
+                            <constraint firstItem="qEg-xC-oSj" firstAttribute="top" secondItem="XAL-1g-4RE" secondAttribute="bottom" constant="69" id="xi6-ZL-oS6"/>
+                            <constraint firstItem="XAL-1g-4RE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yI8-uR-FUp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultstTextView" destination="qEg-xC-oSj" id="Nak-J0-eob"/>
+                        <outlet property="spinner" destination="mOM-XR-d9R" id="SRi-NV-zq5"/>
+                        <outlet property="startButton" destination="XAL-1g-4RE" id="md3-tP-riT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
